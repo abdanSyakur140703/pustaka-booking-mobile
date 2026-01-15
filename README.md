@@ -12,6 +12,15 @@ REST API Integration
 Backend API (CodeIgniter)
 
 Environment Configuration (.env)
+✨ Features
+
+- User Registration & Login
+- View Buku / Publikasi
+- Detail Buku & Event
+- Download PDF (Membership Only)
+- Membership Payment (Midtrans)
+- Profile Management
+- REST API Integration
 
 🚀 Getting Started
 
