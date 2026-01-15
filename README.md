@@ -1,79 +1,135 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Pustaka Booking App (Android)
 
-# Getting Started
+Pustaka Booking App adalah aplikasi Android berbasis React Native yang terhubung dengan REST API CodeIgniter.
+Aplikasi ini memungkinkan pengguna untuk melihat data pustaka/buku dan melakukan proses booking secara online.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Project ini dibuat sebagai portfolio untuk menunjukkan kemampuan dalam:
 
-## Step 1: Start the Metro Server
+Mobile Development (React Native)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+REST API Integration
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Backend API (CodeIgniter)
 
-```bash
-# using npm
+Environment Configuration (.env)
+
+🚀 Getting Started
+
+Catatan
+Pastikan environment React Native sudah terpasang dengan benar (Android Studio, SDK, Emulator, Node.js).
+
+Panduan lengkap setup environment:
+👉 https://reactnative.dev/docs/environment-setup
+
+⚙️ Konfigurasi API (PENTING)
+
+Aplikasi ini tidak menggunakan API URL hardcode.
+
+1️⃣ Buat file .env
+
+Di root project Android, buat file .env:
+
+API_BASE_URL=http://10.0.2.2/pustaka-booking/api/
+
+📌 10.0.2.2 digunakan agar Android Emulator bisa mengakses localhost.
+
+2️⃣ File contoh .env.example
+API_BASE_URL=http://localhost/your-api/
+
+File .env tidak di-push ke GitHub dan sudah dimasukkan ke .gitignore.
+
+▶️ Menjalankan Aplikasi
+Step 1: Install Dependency
+npm install
+
+atau
+
+yarn install
+
+Step 2: Jalankan Metro Server
 npm start
 
-# OR using Yarn
+atau
+
 yarn start
-```
 
-## Step 2: Start your Application
+Biarkan Metro berjalan di terminal sendiri.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Step 3: Jalankan Aplikasi Android
 
-### For Android
+Buka terminal baru, lalu jalankan:
 
-```bash
-# using npm
 npm run android
 
-# OR using Yarn
+atau
+
 yarn android
-```
 
-### For iOS
+Jika setup benar, aplikasi akan berjalan di Android Emulator.
 
-```bash
-# using npm
-npm run ios
+🔄 Mengubah & Reload Aplikasi
 
-# OR using Yarn
-yarn ios
-```
+Setelah aplikasi berjalan:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Edit file App.tsx atau file di folder src/
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Untuk reload di Android:
 
-## Step 3: Modifying your App
+Tekan R dua kali, atau
 
-Now that you have successfully run the app, let's modify it.
+Tekan Ctrl + M → pilih Reload
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+🧪 Backend API
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Backend aplikasi ini menggunakan CodeIgniter 3 dan REST API berbasis JSON.
 
-## Congratulations! :tada:
+Contoh endpoint:
 
-You've successfully run and modified your React Native App. :partying_face:
+GET /api/tes
 
-### Now what?
+Response:
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+{
+"status": "ok"
+}
 
-# Troubleshooting
+Backend berada di repository terpisah (atau folder server lokal).
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+🛠️ Teknologi yang Digunakan
 
-# Learn More
+Frontend (Android):
 
-To learn more about React Native, take a look at the following resources:
+React Native
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Kotlin
+
+Gradle
+
+Android SDK 34
+
+Backend:
+
+CodeIgniter 3
+
+MySQL
+
+REST API (JSON)
+
+📌 Catatan Tambahan
+
+Menggunakan debug keystore (development only)
+
+Cocok dijalankan di Android Emulator
+
+Fokus pada arsitektur, API integration, dan best practice
+
+👤 Author
+
+Abdan Syakur
+📱 Mobile & Web Developer
+🔗 GitHub: https://github.com/abdanSyakur140703
+
+⭐ Penutup
+
+Terima kasih sudah melihat project ini.
+Project ini dikembangkan sebagai bagian dari portfolio dan siap untuk dikembangkan lebih lanjut.
