@@ -1,7 +1,11 @@
-Pustaka Booking App (Android)
+📱 Dosen App (Android)
 
-Pustaka Booking App adalah aplikasi Android berbasis React Native yang terhubung dengan REST API CodeIgniter.
-Aplikasi ini memungkinkan pengguna untuk melihat data pustaka/buku dan melakukan proses booking secara online.
+Dosen App adalah aplikasi Android berbasis React Native yang terhubung dengan REST API CodeIgniter.
+Aplikasi ini dikembangkan sebagai platform pribadi untuk dosen dalam mendistribusikan konten akademik dan informasi publik.
+
+🔄 Project Evolution
+Project ini awalnya merupakan aplikasi Pustaka Booking, kemudian direstrukturisasi dan dikembangkan ulang
+menjadi aplikasi multi-fitur untuk kebutuhan dosen, dengan penambahan fitur konten, membership, dan transaksi.
 
 Project ini dibuat sebagai portfolio untuk menunjukkan kemampuan dalam:
 
@@ -12,22 +16,43 @@ REST API Integration
 Backend API (CodeIgniter)
 
 Environment Configuration (.env)
+
+Refactoring & Feature Expansion
+
 ✨ Features
 
-- User Registration & Login
-- View Buku / Publikasi
-- Detail Buku & Event
-- Download PDF (Membership Only)
-- Membership Payment (Midtrans)
-- Profile Management
-- REST API Integration
+About & Profile Information
+
+User Registration & Login
+
+E-Book / Publikasi (View & Download)
+
+Materi Kuliah (Download)
+
+Event Akademik
+
+Berita & Artikel
+
+Produk Digital
+
+Membership (Paid Access)
+
+Download PDF (Membership Only)
+
+REST API Integration
 
 🚀 Getting Started
-
 Catatan
-Pastikan environment React Native sudah terpasang dengan benar (Android Studio, SDK, Emulator, Node.js).
 
-Panduan lengkap setup environment:
+Pastikan environment React Native sudah terpasang dengan benar:
+
+Android Studio
+
+Android SDK & Emulator
+
+Node.js
+
+Panduan resmi:
 👉 https://reactnative.dev/docs/environment-setup
 
 ⚙️ Konfigurasi API (PENTING)
@@ -36,29 +61,29 @@ Aplikasi ini tidak menggunakan API URL hardcode.
 
 1️⃣ Buat file .env
 
-Di root project Android, buat file .env:
+Di root project, buat file .env:
 
 API_BASE_URL=http://10.0.2.2/pustaka-booking/api/
 
-📌 10.0.2.2 digunakan agar Android Emulator bisa mengakses localhost.
+📌 10.0.2.2 digunakan agar Android Emulator dapat mengakses localhost.
 
 2️⃣ File contoh .env.example
 API_BASE_URL=http://localhost/your-api/
 
-File .env tidak di-push ke GitHub dan sudah dimasukkan ke .gitignore.
+📌 File .env tidak di-push ke GitHub dan sudah dimasukkan ke .gitignore.
 
 ▶️ Menjalankan Aplikasi
 Step 1: Install Dependency
 npm install
 
-atau
+# atau
 
 yarn install
 
 Step 2: Jalankan Metro Server
 npm start
 
-atau
+# atau
 
 yarn start
 
@@ -66,11 +91,11 @@ Biarkan Metro berjalan di terminal sendiri.
 
 Step 3: Jalankan Aplikasi Android
 
-Buka terminal baru, lalu jalankan:
+Buka terminal baru:
 
 npm run android
 
-atau
+# atau
 
 yarn android
 
@@ -78,19 +103,17 @@ Jika setup benar, aplikasi akan berjalan di Android Emulator.
 
 🔄 Mengubah & Reload Aplikasi
 
-Setelah aplikasi berjalan:
+Edit App.tsx atau file di folder src/
 
-Edit file App.tsx atau file di folder src/
-
-Untuk reload di Android:
+Reload Android:
 
 Tekan R dua kali, atau
 
-Tekan Ctrl + M → pilih Reload
+Ctrl + M → Reload
 
 🧪 Backend API
 
-Backend aplikasi ini menggunakan CodeIgniter 3 dan REST API berbasis JSON.
+Backend menggunakan CodeIgniter 3 dan REST API berbasis JSON.
 
 Contoh endpoint:
 
@@ -102,13 +125,14 @@ Response:
 "status": "ok"
 }
 
-Backend berada di repository terpisah (atau folder server lokal).
+📌 Backend berada di repository terpisah atau server lokal.
 
-🛠️ Teknologi yang Digunakan
-
-Frontend (Android):
+🛠️ Tech Stack
+Frontend (Android)
 
 React Native
+
+TypeScript
 
 Kotlin
 
@@ -116,7 +140,7 @@ Gradle
 
 Android SDK 34
 
-Backend:
+Backend
 
 CodeIgniter 3
 
@@ -132,6 +156,8 @@ Cocok dijalankan di Android Emulator
 
 Fokus pada arsitektur, API integration, dan best practice
 
+Project siap dikembangkan lebih lanjut
+
 👤 Author
 
 Abdan Syakur
@@ -140,5 +166,6 @@ Abdan Syakur
 
 ⭐ Penutup
 
-Terima kasih sudah melihat project ini.
-Project ini dikembangkan sebagai bagian dari portfolio dan siap untuk dikembangkan lebih lanjut.
+Terima kasih telah melihat project ini.
+Project ini dikembangkan sebagai bagian dari portfolio dan mencerminkan kemampuan dalam
+mengembangkan, memodifikasi, dan mengintegrasikan aplikasi mobile dengan backend API.
